@@ -207,7 +207,8 @@
   </div>
   <!-- NAVIGATION -->
   <nav class="fixed top-0 w-full p-8 flex justify-between items-center z-50 mix-blend-difference text-white">
-    <div class="display font-bold text-base tracking-tighter">Serie Architects</div>
+    <a href="#hero" class="display font-bold text-base tracking-tighter hover:text-gray-300 transition-colors">Serie
+      Architects</a>
     <div class="hidden md:flex gap-10 text-xs uppercase tracking-widest">
       <a href="#work" class="hover:text-gray-300 transition-colors">Work</a>
       <a href="#studio" class="hover:text-gray-300 transition-colors">Studio</a>
@@ -217,7 +218,7 @@
   <!-- WRAPPER -->
   <div class="wrapper">
     <!-- HERO -->
-    <section class="h-screen relative flex items-center justify-center overflow-hidden">
+    <section id="hero" class="h-screen relative flex items-center justify-center overflow-hidden">
       <img
         src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/482e7b6a-168c-4d0d-b35d-0e2ff4014577_3840w.webp"
         class="absolute inset-0 w-full h-full object-cover brightness-75 hero-img" alt="Hero">
@@ -338,7 +339,10 @@
     <section class="py-40 bg-[#E3E1DC] text-center flex flex-col items-center justify-center relative z-10">
       <h2 class="display text-3xl md:text-5xl mb-8">Designing with Purpose</h2>
       <div class="max-w-xl text-gray-600 font-light mb-12 leading-relaxed">
-        The practice is known for its emphasis on the study of building typologies and their embedded intelligence and cultural values. Fundamental to our work is a highly refined approach to design with emphasis on intelligent organization, rigorous geometry and the innovative use of materials. This combination of capabilities has allowed the firm to develop a reputation for exciting, contemporary design that resonates with the cultural and social values of a particular place and locality.
+        I am RIBA accredited as a Specialist Conservation Architect (equivalent to AABC), but my passion also lies in
+        combining cutting-edge design with the intelligent use of traditional building materials in innovative ways. I
+        particularly enjoy transforming and elevating 'ordinary' houses and places, always seeking out new challenges
+        that test the boundaries of architectural creativity.
       </div>
       <div class="h-16 w-px bg-black/20"></div>
     </section>
@@ -366,7 +370,7 @@
     const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), direction: 'vertical', smooth: true });
     function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
     requestAnimationFrame(raf);
-    document.querySelectorAll('a[href="#work"], a[href="#studio"], a[href="#contact"]').forEach(anchor => {
+    document.querySelectorAll('a[href="#hero"], a[href="#work"], a[href="#studio"], a[href="#contact"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const href = this.getAttribute('href');
